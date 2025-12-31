@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style></style>
+<body>
+    <input type="text" onkeyup="check(event)">
+    <div>
+        <h1>one</h1>
+        <h1>two</h1>
+        <h1>three</h1>
+        <h1>four</h1>
+        <h1>five</h1>
+        <h1>six</h1>
+    </div>
+    
+</body>
+</html>
+<script>
+    var srI=""
+    var container = document.querySelector("div")
+    var elements = container.querySelectorAll("h1")
+    console.log(elements)
+    function check(event)
+    {
+        srI = event.target.value
+        for(var i=0;i<elements.length;i++)
+        {
+      if(elements[i].textContent.indexOf(srI)<0){
+
+        elements[i].style.display=none;
+      }
+      else{
+        elements[i].style.display="block"
+      }
+
+    }}
+    
+</script>
